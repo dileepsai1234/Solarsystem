@@ -1,0 +1,260 @@
+/* The webpage overall styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    color: grey;
+}
+
+
+/* body */
+body {
+    /* background-color: black; */
+    overflow: hidden;
+}
+
+/* }background video */
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+}
+
+/* signup container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    /* margin-left: 850px; */
+    /* margin-top: 50px; */
+}
+
+.card {
+    /* z-index: 3; */
+    width: 350px;
+    height: 650px;
+    border-width: 3px;
+    border-style: solid;
+    border-left-color: violet;
+    border-right-color: blueviolet;
+    border-top-color: violet;
+    border-bottom-color: blueviolet;
+    /* border-color:white; */
+    border-radius: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(3px);
+}
+
+.card:hover {
+    box-shadow: -10px -5px 20px rgba(138, 43, 246, 0.65), 10px 5px 20px rgba(238, 130, 238, .65);
+}
+
+.card .head {
+    text-align: center;
+    padding: 1rem;
+}
+
+.card .head h1 {
+    /* background-image: linear-gradient(90deg, rgb(238, 130, 238), rgb(138, 43, 246));
+    background-clip:text;
+    color: transparent; */
+    color: #fff;
+}
+
+.body {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.body input {
+    width: 80%;
+    padding: 15px;
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+.body input[type=text],
+input[type=email],
+input[type=password] {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+.body input:focus {
+    color: white;
+    font-size: 13px;
+    border-radius: 5px;
+    border-width: 80%;
+    transition: .7s;
+    border: 2px solid violet;
+}
+
+.body input::placeholder {
+    transition: .7s;
+    color: white;
+}
+
+.body input:focus::placeholder {
+    transition: .7s;
+    transform: translateY(-15px);
+    font-size: 13px;
+}
+
+
+
+.footer input[type=submit] {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 13px 33px;
+    background-image: linear-gradient(to right, rgba(238, 130, 238, .65), rgba(138, 43, 246, 0.65));
+    color: black;
+    font-weight: 600;
+    font-size: 17px;
+    transition: .7s;
+    border: none;
+}
+
+.footer input[type=submit]:hover {
+    cursor: pointer;
+    /* box-shadow: -10px -5px 15px rgba(138, 43, 246, 0.5),10px 5px 20px rgba(238, 130, 238, .5); */
+    transform: scale(1.1, 1.1);
+}
+
+
+.footer p {
+    padding: 20px 37px 0;
+    color: #fff;
+}
+
+hr {
+    opacity: .3;
+    width: 80%;
+    margin-left: 35px;
+}
+
+.footer p a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer p a:hover {
+    opacity: .7;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+/* 3d object earth */
+/* #aSide {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: 5%;
+} */
+
+/* This styles the 3D object inserted in the aside container */
+/* #aSide model-viewer {
+    height: 800px;
+    width: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+} */
+
+.cursor1 {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border:1px solid white;
+    border-radius: 50%;
+    left: 0;
+    top:0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: .15s;
+}
+
+.cursor2 {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(138, 43, 246, 0.65);
+    animation: colour 4s linear infinite;
+    border-radius: 50%;
+    left: 0;
+    top:0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: .15s;
+}
+
+@keyframes colour {
+    0% {background-color: rgba(238, 130, 238, .65);}
+
+    25% { background-color: rgba(255, 6, 6, 0.957);}
+
+    50% { background-color: rgba(138, 43, 246, 0.65)}
+
+    75% { background-color: rgba(119, 255, 0, 0.65);}
+
+    100% { background-color: rgba(255, 230, 6, 0.957);}
+}
+
+body:hover ~ .cursor1 {
+    transform: translate(-50%,-50%) scale(1.5);
+    background-color: #c6c6c6;
+    opacity: .5;
+}
+
+body:hover ~ .cursor2 {
+    opacity: 0;
+}
+
+/* .card:hover ~ .cursor1 {
+    transform: translate(-50%,-50%) scale(1.5);
+    background-color: #c6c6c6;
+    opacity: .5;
+}
+
+.card:hover ~ .cursor2 {
+    opacity: 0;
+} */
+
+i:hover {
+    opacity:.7;
+}
+
+@media only screen and (max-width:600px) {
+    * {
+        /* overflow : hidden;
+         */
+         background-color: black;
+    }
+    body {
+        width:500px;
+        height:700px;
+        
+        /* overflow-x:hidden; */
+    }
+    video {
+       display:none;
+    }
+    .container a i {
+        display:none;
+    }
+}

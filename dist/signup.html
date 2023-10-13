@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ---------- title -------------- -->
+    <title>Solar System</title>
+    <!-- ----------- css --------------- -->
+    <link rel="stylesheet" href="css/signup.css">
+    <!-- ------------ aos ---------- -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- -------------- 3d script ------------- -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <!-- --------------------- cdn -------------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <video src="video/asteroids_-_9135 (720p).mp4" autoplay playsinline muted loop></video>
+    <!-- --------- container ---------- -->
+    <div class="container">
+        <a href="index.html"><i data-aos="zoom-in" data-aos-duration="2000" class="fa-solid fa-arrow-left"
+                style="font-size: 30px;color:#ffffff;position: absolute;top:60px;left:290px;"></i></a>
+        <!-- <div id="aSide"> -->
+        <!-- <model-viewer src="assets/scene.gltf" alt="Earth" auto-rotate camera-controls arios-src="assets/scene.gtlg" data-aos="fade-right" data-aos-duration="2000"></model-viewer> -->
+        <!-- </div> -->
+        <!-- -------- signup card --------- -->
+        <div class="card" data-aos="zoom-in" data-aos-duration="2000">
+            <div class="head">
+                <h1>Sign up</h1>
+            </div>
+            <hr>
+            <div class="body">
+                <input class="b-input" type="text" placeholder="First Name" name="firstname">
+                <input class="b-input" type="text" placeholder="Last Name" name="lastname">
+                <input class="b-input" type="email" placeholder="Email" name="email">
+                <input class="b-input" type="password" placeholder="Password" name="password">
+                <input class="b-input" type="password" placeholder="Reenter-Password" name="password">
+            </div>
+            <div class="footer">
+                <a href="home.html"><input type="submit" value="Sign Up"></a>
+                <hr>
+                <p>Already have an account? <a href="login.html"> log in</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="cursor1"></div>
+    <div class="cursor2"></div>
+
+    <script>
+        var cursor1 = document.querySelector(".cursor1");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove", function (e) {
+            cursor1.style.cssText = cursor2.style.cssText = "left: " + e.clientX
+                + "px; top:" + e.clientY + "px;";
+        })
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

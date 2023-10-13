@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth - Solar System</title>
+    <!-- ------------------------css -------------------------- -->
+    <link rel="stylesheet" href="css/earth.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- ------------------------------------cdn css------------------------------------------- -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- -------------------------------------------cdn-------------------------------------------- -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- -------------- 3d script ------------- -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+
+<body style="background-color: #222;">
+    <!-- -------------------------------Navbar--------------------------------------- -->
+
+
+
+    <div class="contain">
+        <div class="header">
+            <div class="nav" id="nav">
+                <div class="logo" style="padding:20px 30px;">
+                    <img src="image/space111.png" alt="Logo" height="310" width="320"
+                        style="margin-top: -130px;margin-left: 20px;">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li class="show"><a href="#timeline">Planets &nbsp;&nbsp;<i
+                                    class="fa-solid fa-angle-down"></i></a>
+                            <div class="hidden">
+                                <a href="mercury.html">Mercury</a>
+                                <a href="venus.html">Venus</a>
+                                <a href="earth.html">Earth</a>
+                                <a href="mars.html">Mars</a>
+                                <a href="jupiter.html">Jupiter</a>
+                                <a href="saturn.html">Saturn</a>
+                                <a href="uranus.html">Uranus</a>
+                                <a href="neptune.html">Neptune</a>
+                            </div>
+                        </li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><button type="button"
+                                style="padding: 5px 10px;margin-top: -5px;outline:none;border: 2px solid #fff;border-radius: 5px;transition: .7s;"
+                                onclick='document.getElementById("contact").style.transform="scale(1,1)"'>Contact
+                                Us</button>
+                        </li>
+                        <li class="show"><a href="#hide1" style="margin-right: 40px;"><img
+                                    style="background-color:white;border-radius: 30px;margin-top:-5px;"
+                                    src="image/profile2.png" alt="" width="40px" height="40px"></a>
+                            <div class="hide" id="hide1"><a href="welcome.html">Logout</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------- contactus form ------------------------->
+    <div class="contact" id="contact">
+        <!-- Default form contact -->
+        <form class="text-center border border-light p-5" action="#!"
+            style="width:25%;margin-left: auto;margin-right: auto;border:2px solid #000;margin-top: 140px;background-color: transparent;border-radius: 20px;">
+            <button
+                style="color:#fff;background-color:transparent;font-size:40px;position:absolute;left:59.5%;top:19%;border: none;outline:none;"
+                type="button" onclick='document.getElementById("contact").style.transform="scale(0,0)"'><i
+                    class="fa-solid fa-close"></i></button>
+            <p class="h4 mb-4 text-light">Contact us</p>
+
+            <!-- Name -->
+            <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+
+            <!-- Email -->
+            <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+            <!-- Subject -->
+            <label class="text-light">Subject</label>
+            <select class="browser-default custom-select mb-4">
+                <option value="" disabled>Choose option</option>
+                <option value="1" selected>Feedback</option>
+                <option value="2">Report a bug</option>
+                <option value="3">Feature request</option>
+                <option value="4">Feature request</option>
+            </select>
+
+            <!-- Message -->
+            <div class="form-group">
+                <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"
+                    placeholder="Message"></textarea>
+            </div>
+
+            <!-- Copy -->
+            <div class="custom-control custom-checkbox mb-4">
+                <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+                <label class="custom-control-label text-light" for="defaultContactFormCopy">Send me a copy of this
+                    message</label>
+            </div>
+
+            <!-- Send button -->
+            <button class="btn btn-info btn-block" type="submit">Send</button>
+
+        </form>
+        <!-- Default form contact -->
+    </div>
+
+    <!-- ------------------------- social-icons -------------------------- -->
+    <div class="icons">
+        <div class="icon1">
+            <a href="https://www.twitter.com/vamsimanugula" target="_blank"><i class="fa-brands fa-twitter"
+                    style="font-size: 35px;color: #f8f8f8;padding: 10px 15px;"></i></a>
+        </div>
+        <div class="icon2">
+            <a href="https://www.instagram.com/ramaprakashmanugula" target="_blank"><i class="fa-brands fa-instagram"
+                    style="font-size: 35px;color: #f8f8f8;padding: 10px 15px;"></i></a>
+        </div>
+        <div class="icon3">
+            <a href="https://www.facebook.com/prakash.manugula" target="_blank"><i class="fa-brands fa-facebook"
+                    style="font-size: 35px;color: #f8f8f8;padding: 10px 15px;"></i></a>
+        </div>
+    </div>
+    <!-- ------------------------video------------------------------------- -->
+
+
+    <video src="video/Untitled video - Made with Clipchamp (2).mp4" autoplay muted playsinline loop></video>
+    <div class="banner-faded"></div>
+
+
+    <!-- ----------------- middle navbar ------------------------- -->
+    <ul class="nav justify-content-center" style="margin-top: 150rems; position: absolute; top: 860px; left: 45%;  ">
+        <li class="nav-item">
+            <a class="nav-link  bg-dark" style="color: #fff;" href="earth.html">Overview</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active bg-dark" style="color:#999;" href="earth1.html">In depth</a>
+        </li>
+
+    </ul>
+
+    <!-- --------------------------- about ---------------------------------------- -->
+    <div class="about">
+        <h1>Earth</h1>
+        <div class="about-earth">
+            <div id="aSide">
+                <model-viewer src="image/earth1.glb" alt="Earth" auto-rotate camera-controls
+                    arios-src="image/earth1.glb" data-aos="fade-right" data-aos-duration="2000"></model-viewer>
+            </div>
+            <div class="desc" data-aos="fade-left" data-aos-duration="2000">
+                Our home planet is the third planet from the Sun, and the only place we know of so far that's inhabited
+                by
+                living things.<br>
+                <br>
+                The Latest<br>
+                New NASA Map Details 2023 and 2024 Solar Eclipses in the US<br>
+                The Moon Illusion: Why Does the Moon Look So Big Sometimes?<br>
+                While Earth is only the fifth largest planet in the solar system, it is the only world in our solar
+                system
+                with liquid water on the surface. Just slightly larger than nearby Venus, Earth is the biggest of the
+                four
+                planets closest to the Sun, all of which are made of rock and metal.<br><br>
+
+                Earth is the only planet in the Solar System whose English name does not come from Greek or Roman
+                mythology.
+                The name was taken from Old English and Germanic. It simply means "the ground." There are, of course,
+                many
+                names for our planet in the thousands of languages spoken by the people of the third planet from the
+                Sun.
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------- carousel -------------------------------------- -->
+    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/e2.jpg.avif" class="d-block w-100" alt="" height="600">
+            </div>
+            <div class="carousel-item">
+                <img src="image/e1.jpg.webp" class="d-block w-100" alt="..." height="600">
+            </div>
+            <div class="carousel-item">
+                <img src="image/e3.jpg" class="d-block w-100" alt="..." height="600">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div> -->
+
+    <!-- ------------------------------ cards ------------------------------------------ -->
+    <div class="cont">
+        <h1>Nine things about our home planet</h1>
+        <div class="cards1">
+            <div class="card1">
+                <div class="circle">1</div>
+                <h2>MEASURING UP</h2>
+                <p data-aos="fade-right" data-aos-duration="2000">If the Sun were as tall as a typical front door, Earth
+                    would be the size of a nickel.</p>
+            </div>
+            <div class="card2">
+                <div class="circle" style="margin-left:80px;">2</div>
+                <h2>THIRD ROCK</h2>
+                <p data-aos="zoom-in" data-aos-duration="2000">Earth orbits our Sun, a star. Earth is the third planet
+                    from the Sun at a distance of about 93
+                    million miles (150 million km).</p>
+            </div>
+            <div class="card3">
+                <div class="circle">3</div>
+                <h2>AS THE WORLD TURNS</h2>
+                <p data-aos="fade-left" data-aos-duration="2000">A day on Earth is 24 hours. Earth makes a complete
+                    orbit around the sun (a year in Earth time) in
+                    about 365 days.</p>
+            </div>
+        </div>
+        <div class="cards2">
+            <div class="card4">
+                <div class="circle">4</div>
+                <h2>WE'RE ON IT</h2>
+                <p data-aos="fade-right" data-aos-duration="2000">Earth is a rocky planet with a solid and dynamic
+                    surface of mountains, canyons, plains and more. Most
+                    of our planet is covered in water.</p>
+            </div>
+            <div class="card5">
+                <div class="circle" style="margin-left:85px;">5</div>
+                <h2>BREATHE EASY</h2>
+                <p data-aos="zoom-in" data-aos-duration="2000">Earth's atmosphere is 78 percent nitrogen, 21 percent
+                    oxygen and 1 percent other ingredients—the
+                    perfect balance to breathe and live.</p>
+            </div>
+            <div class="card6">
+                <div class="circle">6</div>
+                <h2>OUR COSMIC COMPANION</h2>
+                <p data-aos="fade-left" data-aos-duration="2000">Earth has one moon.</p>
+            </div>
+        </div>
+        <div class="cards3">
+            <div class="card7">
+                <div class="circle">7</div>
+                <h2>RINGLESS</h2>
+                <p data-aos="fade-right" data-aos-duration="2000">Earth has no rings.</p>
+                <h2>HOME, SWEET HOME</h2>
+                <p data-aos="fade-right" data-aos-duration="2000">Earth is the perfect place for life as we know it.</p>
+            </div>
+            <div class="card8">
+                <div class="circle" style="margin-left:85px;">8</div>
+                <h2>ORBITAL SCIENCE</h2>
+                <p data-aos="zoom-in" data-aos-duration="2000">Many orbiting spacecraft study the Earth from above as a
+                    whole system—observing the atmosphere,
+                    ocean, glaciers, and the solid earth.</p>
+            </div>
+            <div class="card9">
+                <div class="circle">9</div>
+                <h2>PROTECTIVE SHIELD</h2>
+                <p data-aos="fade-left" data-aos-duration="2000">Our atmosphere protects us from incoming meteoroids,
+                    most of which break up in our atmosphere before
+                    they can strike the surface.</p>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------------------------Footer------------------------------------------------- -->
+
+    <div class="footer">
+        <h1 class="footer-h1">Questions? call 000-000-000-000</h1>
+        <div class="row">
+            <div class="col">
+                <a href="solarsystem.html">Solar System</a>
+                <a href="sun.html">Sun</a>
+                <a href="milkyway.html">Milky Way</a>
+                <a href="blackhole.html">Black Hole</a>
+            </div>
+            <div class="col">
+                <a href="mercury.html">Mercury</a>
+                <a href="venus.html">Venus</a>
+                <a href="earth.html">Earth</a>
+                <a href="mars.html">Mars</a>
+            </div>
+            <div class="col">
+                <a href="jupiter.html">Jupiter</a>
+                <a href="saturn.html">Saturn</a>
+                <a href="uranus.html">Uranus</a>
+                <a href="neptune.html">Neptune</a>
+            </div>
+            <div class="col">
+                <a href="about.html">About Us</a>
+                <button type="button"
+                    style="padding: 5px;margin-top: -5px;outline:none;border:none;border-radius: 5px;transition: .7s;"
+                    onclick='document.getElementById("contact").style.transform="scale(1,1)"'>Contact Us</button>
+            </div>
+        </div>
+    </div>
+
+    <!------------------- Chat bot -------------------->
+    <!--Start of Conferbot Script-->
+    <script type="text/javascript">
+        (function (d, s, id) {
+            var js,
+                el = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.async = true;
+            js.src = 'https://s3.ap-south-1.amazonaws.com/conferbot.defaults/dist/v1/widget.min.js';
+            js.id = id;
+            js.charset = 'UTF-8';
+            el.parentNode.insertBefore(js, el);
+            // Initializes the widget when the script is ready
+            js.onload = function () {
+                var w = window.ConferbotWidget("64719fa23b98f3224becc5ff", "live_chat");
+            };
+        })(document, 'script', 'conferbot-js');
+    </script>
+    <!--End of Conferbot Script-->
+    <!-- -------------- mouse event ---------- -->
+    <div class="cursor1"></div>
+    <div class="cursor2"></div>
+
+    <script>
+        var cursor1 = document.querySelector(".cursor1");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove", function (e) {
+            cursor1.style.cssText = cursor2.style.cssText = "left: " + e.clientX
+                + "px; top:" + e.clientY + "px;";
+        })
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

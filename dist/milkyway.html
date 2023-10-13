@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milky Way Galaxy</title>
+    <!-- ------------------------css -------------------------- -->
+    <link rel="stylesheet" href="css/milkyway.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- ------------------------------------cdn css------------------------------------------- -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- -------------------------------------------cdn-------------------------------------------- -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- -------------- 3d script ------------- -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+<body style="background-color: #222;">
+    <!-- -------------------------------Navbar--------------------------------------- -->
+
+
+
+    <div class="contain">
+        <div class="header">
+            <div class="nav" id="nav">
+                <div class="logo" style="padding:20px 30px;">
+                    <img src="image/space111.png" alt="Logo" height="310" width="320"
+                        style="margin-top: -130px;margin-left: 20px;">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li class="show"><a href="#timeline">Planets &nbsp;&nbsp;<i
+                                    class="fa-solid fa-angle-down"></i></a>
+                            <div class="hidden">
+                                <a href="mercury.html">Mercury</a>
+                                <a href="venus.html">Venus</a>
+                                <a href="earth.html">Earth</a>
+                                <a href="mars.html">Mars</a>
+                                <a href="jupiter.html">Jupiter</a>
+                                <a href="saturn.html">Saturn</a>
+                                <a href="uranus.html">Uranus</a>
+                                <a href="neptune.html">Neptune</a>
+                            </div>
+                        </li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><button type="button"
+                                style="padding: 5px 10px;margin-top: -5px;outline:none;border: 2px solid #fff;border-radius: 5px;transition: .7s;"
+                                onclick='document.getElementById("contact").style.transform="scale(1,1)"'>Contact
+                                Us</button>
+                        </li>
+                        <li class="show"><a href="#hide1" style="margin-right: 40px;"><img
+                                    style="background-color:white;border-radius: 30px;margin-top:-5px;"
+                                    src="image/profile2.png" alt="" width="40px" height="40px"></a>
+                            <div class="hide" id="hide1"><a href="index.html">Logout</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------- contactus form ------------------------->
+    <div class="contact" id="contact">
+        <!-- Default form contact -->
+        <form class="text-center border border-light p-5" action="#!"
+            style="width:25%;margin-left: auto;margin-right: auto;border:2px solid #000;margin-top: 140px;background-color: transparent;border-radius: 20px;">
+            <button
+                style="color:#fff;background-color:transparent;font-size:40px;position:absolute;left:59.5%;top:19%;border: none;outline:none;"
+                type="button" onclick='document.getElementById("contact").style.transform="scale(0,0)"'><i
+                    class="fa-solid fa-close"></i></button>
+            <p class="h4 mb-4 text-light">Contact us</p>
+
+            <!-- Name -->
+            <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+
+            <!-- Email -->
+            <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+            <!-- Subject -->
+            <label class="text-light">Subject</label>
+            <select class="browser-default custom-select mb-4">
+                <option value="" disabled>Choose option</option>
+                <option value="1" selected>Feedback</option>
+                <option value="2">Report a bug</option>
+                <option value="3">Feature request</option>
+                <option value="4">Feature request</option>
+            </select>
+
+            <!-- Message -->
+            <div class="form-group">
+                <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"
+                    placeholder="Message"></textarea>
+            </div>
+
+            <!-- Copy -->
+            <div class="custom-control custom-checkbox mb-4">
+                <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+                <label class="custom-control-label text-light" for="defaultContactFormCopy">Send me a copy of this
+                    message</label>
+            </div>
+
+            <!-- Send button -->
+            <button class="btn btn-info btn-block" type="submit">Send</button>
+
+        </form>
+        <!-- Default form contact -->
+    </div>
+
+    <!-- ------------------------- social-icons -------------------------- -->
+    <div class="icons">
+        <div class="icon1">
+            <a href="https://www.twitter.com/vamsimanugula" target="_blank"><i class="fa-brands fa-twitter"
+                    style="font-size: 35px;color: #f8f8f8;padding: 10px 15px;"></i></a>
+        </div>
+        <div class="icon2">
+            <a href="https://www.instagram.com/ramaprakashmanugula" target="_blank"><i class="fa-brands fa-instagram"
+                    style="font-size: 35px;color: #f8f8f8;padding: 10px 15px;"></i></a>
+        </div>
+        <div class="icon3">
+            <a href="https://www.facebook.com/prakash.manugula" target="_blank"><i class="fa-brands fa-facebook"
+                    style="font-size: 35px;color: #f8f8f8;padding: 10px 15px;"></i></a>
+        </div>
+    </div>
+    <!-- ------------------------video------------------------------------- -->
+
+
+    <video src="video/Milky Way Galaxy.mp4" autoplay muted playsinline loop></video>
+    <div class="banner-faded"></div>
+
+
+    <!-- --------------------------------- side 3d models------------------------------- -->
+    <div class="con" style="display:flex;justify-content: space-between;">
+        <div class="leftside" style="position: sticky;top:0;z-index:4;">
+            <model-viewer src="image/need_some_space.glb" alt="Milky Way Galaxy" auto-rotate camera-controls
+                arios-src="image/scene.gtlg" data-aos="fade-right" data-aos-duration="2000"></model-viewer>
+        </div>
+        <div class="center" style="max-width: 600px;color:rgb(188, 188, 188);margin-top: 100px;font-size: 16px;">
+            <h1>The Milky Way Galaxy</h1>
+            <p>Like early explorers mapping the continents of our globe, astronomers are busy charting the spiral
+                structure of our galaxy, the Milky Way. Using infrared images from NASA's Spitzer Space Telescope,
+                scientists have discovered that the Milky Way's elegant spiral structure is dominated by just two arms
+                wrapping off the ends of a central bar of stars. Previously, our galaxy was thought to possess four
+                major arms.<br><br>
+
+                The annotated artist's concept illustrates the new view of the Milky Way. The galaxy's two major arms
+                (Scutum-Centaurus and Perseus) can be seen attached to the ends of a thick central bar, while the two
+                now-demoted minor arms (Norma and Sagittarius) are less distinct and located between the major arms.
+                <br><br>
+                Structure: The Milky Way consists of several main components. At its center is the bulge, a dense and
+                elongated region where older stars are concentrated. Surrounding the bulge are the spiral arms, which
+                are
+                long, curving structures that contain younger stars, gas, and dust. These arms spiral outwards from the
+                center in a rotating motion. The Milky Way also has a disk, where most of its stars, including our Sun,
+                are
+                located. Above and below the disk is the stellar halo, which contains older stars and globular clusters
+                that
+                orbit the galactic center. The halo extends much farther out compared to the disk.<br><br>
+
+                Stars: The Milky Way is home to billions of stars, ranging in age, size, and temperature. The stars in
+                the
+                Milky Way vary from dim and cool red dwarfs to massive, hot, and luminous blue giants. Our Sun is an
+                average-sized star located in one of the spiral arms, known as the Orion Arm or the Local Arm.<br><br>
+
+                Galactic Rotation: The Milky Way rotates slowly, with different parts of the galaxy moving at different
+                speeds. Stars closer to the center take less time to complete a full rotation than those in the outer
+                regions. This differential rotation gives the Milky Way its spiral arm structure.<br><br>
+
+                Interstellar Medium: The space between the stars in the Milky Way is filled with gas and dust,
+                collectively
+                known as the interstellar medium (ISM). The ISM consists of various elements, including hydrogen,
+                helium,
+                and trace amounts of heavier elements. The gas and dust in the ISM play a crucial role in the formation
+                of
+                new stars and planetary systems.<br><br>
+
+                Galactic Halo: Surrounding the Milky Way's main disk is the stellar halo, which contains old stars,
+                globular
+                clusters, and dark matter. Globular clusters are dense, spherical collections of hundreds of thousands
+                of
+                stars that orbit the galactic center. They are among the oldest known objects in the galaxy.<br><br>
+
+                Galactic Center: At the heart of the Milky Way lies the galactic center, located in the direction of the
+                constellation Sagittarius. Within the galactic center is a supermassive black hole called Sagittarius
+                A*. It
+                has a mass of about 4 million times that of our Sun and plays a significant role in shaping the dynamics
+                of
+                the galaxy.<br><br>
+
+                Other Objects: In addition to stars, the Milky Way is also home to various other celestial objects.
+                These
+                include planets, moons, asteroids, comets, and other smaller bodies. Some notable objects within the
+                Milky
+                Way include the Oort Cloud, a region of icy bodies located beyond the orbit of Neptune, and the Kuiper
+                Belt,
+                a region of small icy objects located beyond the orbit of Neptune as well.
+                <br><br>
+                Studying the Milky Way provides valuable insights into the formation and evolution of galaxies in
+                general.
+                Scientists use a variety of techniques, such as observations in different wavelengths of light, computer
+                simulations, and space missions, to unravel the mysteries of our galaxy and its place in the vast
+                cosmos.
+                <br>
+            </p>
+            <div class="center" style="max-width: 600px;color:rgb(188, 188, 188);margin-top: 60px;font-size: 16px;">
+                <p>Interstellar Medium: The space between the stars in the Milky Way is filled with gas and dust,
+                    collectively
+                    known as the interstellar medium (ISM). The ISM consists of various elements, including hydrogen,
+                    helium,
+                    and trace amounts of heavier elements. The gas and dust in the ISM play a crucial role in the
+                    formation
+                    of
+                    new stars and planetary systems.<br><br>
+
+                    Galactic Halo: Surrounding the Milky Way's main disk is the stellar halo, which contains old stars,
+                    globular
+                    clusters, and dark matter. Globular clusters are dense, spherical collections of hundreds of
+                    thousands
+                    of
+                    stars that orbit the galactic center. They are among the oldest known objects in the galaxy.<br><br>
+
+                    Galactic Center: At the heart of the Milky Way lies the galactic center, located in the direction of
+                    the
+                    constellation Sagittarius. Within the galactic center is a supermassive black hole called
+                    Sagittarius
+                    A*. It
+                    has a mass of about 4 million times that of our Sun and plays a significant role in shaping the
+                    dynamics
+                    of
+                    the galaxy.<br><br>
+
+                    Other Objects: In addition to stars, the Milky Way is also home to various other celestial objects.
+                    These
+                    include planets, moons, asteroids, comets, and other smaller bodies. Some notable objects within the
+                    Milky
+                    Way include the Oort Cloud, a region of icy bodies located beyond the orbit of Neptune, and the
+                    Kuiper
+                    Belt,
+                    a region of small icy objects located beyond the orbit of Neptune as well.
+                    <br><br>
+                    Studying the Milky Way provides valuable insights into the formation and evolution of galaxies in
+                    general.
+                    Scientists use a variety of techniques, such as observations in different wavelengths of light,
+                    computer
+                    simulations, and space missions, to unravel the mysteries of our galaxy and its place in the vast
+                    cosmos.
+                    <br><br>
+                    The major arms consist of the highest densities of both young and old stars; the minor arms are
+                    primarily
+                    filled with gas and pockets of star-forming activity.<br><br>
+
+                    The artist's concept also includes a new spiral arm, called the "Far-3 kiloparsec arm," discovered
+                    via a
+                    radio-telescope survey of gas in the Milky Way. This arm is shorter than the two major arms and lies
+                    along the bar of the galaxy.<br><br>
+
+                    Our Sun lies near a small, partial arm called the Orion Arm, or Orion Spur, located between the
+                    Sagittarius and Perseus arms.
+                </p><br><br>
+            </div>
+        </div>
+        <div class="rightside" style="position: sticky;top:0;z-index: 4;">
+            <model-viewer src="image/need_some_space.glb" alt="Mercury" auto-rotate camera-controls
+                arios-src="image/venus1.glb" data-aos="fade-right" data-aos-duration="2000"></model-viewer>
+        </div>
+    </div>
+
+    <!-- ------------------------------- carousel -------------------------------------- -->
+    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="margin-top: 100px;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/milkyway1.jpg" class="d-block w-100" alt="" height="700">
+            </div>
+            <div class="carousel-item">
+                <img src="image/milkyway4.jpg" class="d-block w-100" alt="..." height="700">
+            </div>
+            <div class="carousel-item">
+                <img src="image/milkyway6.jpg" class="d-block w-100" alt="..." height="700">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div> -->
+    <!-- ----------------------------- side 3d-model ------------------------- -->
+    <div class="con" style="display:flex;justify-content: space-between;">
+        <!-- <div class="leftside" style="position: sticky;top:0;z-index:4;">
+            <model-viewer src="image/need_some_space.glb" alt="Mercury" auto-rotate camera-controls
+                arios-src="image/scene.gtlg" data-aos="fade-right" data-aos-duration="2000"></model-viewer>
+        </div>
+        <div class="rightside" style="position: sticky;top:0;z-index: 4;">
+            <model-viewer src="image/need_some_space.glb" alt="Venus" auto-rotate camera-controls
+                arios-src="image/venus.glb" data-aos="fade-right" data-aos-duration="2000"></model-viewer>
+        </div>
+    </div> -->
+
+        <!-- ---------------------------------------------Footer------------------------------------------------- -->
+
+        <div class="footer">
+            <h1 class="footer-h1">Questions? call 000-000-000-000</h1>
+            <div class="row">
+                <div class="col">
+                    <a href="solarsystem.html">Solar System</a>
+                    <a href="sun.html">Sun</a>
+                    <a href="milkyway.html">Milky Way</a>
+                    <a href="blackhole.html">Black Hole</a>
+                </div>
+                <div class="col">
+                    <a href="mercury.html">Mercury</a>
+                    <a href="venus.html">Venus</a>
+                    <a href="earth.html">Earth</a>
+                    <a href="mars.html">Mars</a>
+                </div>
+                <div class="col">
+                    <a href="jupiter.html">Jupiter</a>
+                    <a href="saturn.html">Saturn</a>
+                    <a href="uranus.html">Uranus</a>
+                    <a href="neptune.html">Neptune</a>
+                </div>
+                <div class="col">
+                    <a href="about.html">About Us</a>
+                    <button type="button"
+                        style="padding: 5px;margin-top: -5px;outline:none;border:none;border-radius: 5px;transition: .7s;"
+                        onclick='document.getElementById("contact").style.transform="scale(1,1)"'>Contact Us</button>
+                </div>
+            </div>
+        </div>
+
+        <!------------------- Chat bot -------------------->
+        <!--Start of Conferbot Script-->
+        <script type="text/javascript">
+            (function (d, s, id) {
+                var js,
+                    el = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {
+                    return;
+                }
+                js = d.createElement(s);
+                js.async = true;
+                js.src = 'https://s3.ap-south-1.amazonaws.com/conferbot.defaults/dist/v1/widget.min.js';
+                js.id = id;
+                js.charset = 'UTF-8';
+                el.parentNode.insertBefore(js, el);
+                // Initializes the widget when the script is ready
+                js.onload = function () {
+                    var w = window.ConferbotWidget("64719fa23b98f3224becc5ff", "live_chat");
+                };
+            })(document, 'script', 'conferbot-js');
+        </script>
+        <!--End of Conferbot Script-->
+        <!-- -------------- mouse event ---------- -->
+        <div class="cursor1"></div>
+        <div class="cursor2"></div>
+
+        <script>
+            var cursor1 = document.querySelector(".cursor1");
+            var cursor2 = document.querySelector(".cursor2");
+            document.addEventListener("mousemove", function (e) {
+                cursor1.style.cssText = cursor2.style.cssText = "left: " + e.clientX
+                    + "px; top:" + e.clientY + "px;";
+            })
+        </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

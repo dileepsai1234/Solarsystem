@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth - Solar System</title>
+    <!-- ------------------------css -------------------------- -->
+    <link rel="stylesheet" href="css/earth1.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- ------------------------------------cdn css------------------------------------------- -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- -------------------------------------------cdn-------------------------------------------- -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- -------------- 3d script ------------- -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+<body style="background-color: #222;">
+    <!-- -------------------------------Navbar--------------------------------------- -->
+
+
+
+    <div class="contain">
+        <div class="header">
+            <div class="nav" id="nav">
+                <div class="logo" style="padding:20px 30px;">
+                    <img src="image/space111.png" alt="Logo" height="310" width="320"
+                        style="margin-top: -130px;margin-left: 20px;">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li class="show"><a href="#timeline">Planets &nbsp;&nbsp;<i
+                                    class="fa-solid fa-angle-down"></i></a>
+                            <div class="hidden">
+                                <a href="mercury.html">Mercury</a>
+                                <a href="venus.html">Venus</a>
+                                <a href="earth.html">Earth</a>
+                                <a href="mars.html">Mars</a>
+                                <a href="jupiter.html">Jupiter</a>
+                                <a href="saturn.html">Saturn</a>
+                                <a href="uranus.html">Uranus</a>
+                                <a href="neptune.html">Neptune</a>
+                            </div>
+                        </li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><button type="button"
+                                style="padding: 5px 10px;margin-top: -5px;outline:none;border: 2px solid #fff;border-radius: 5px;transition: .7s;"
+                                onclick='document.getElementById("contact").style.transform="scale(1,1)"'>Contact
+                                Us</button>
+                        </li>
+                        <li class="show"><a href="#hide1" style="margin-right: 40px;"><img
+                                    style="background-color:white;border-radius: 30px;margin-top:-5px;"
+                                    src="image/profile2.png" alt="" width="40px" height="40px"></a>
+                            <div class="hide" id="hide1"><a href="welcome.html">Logout</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------- contactus form ------------------------->
+    <div class="contact" id="contact">
+        <!-- Default form contact -->
+        <form class="text-center border border-light p-5" action="#!"
+            style="width:25%;margin-left: auto;margin-right: auto;border:2px solid #000;margin-top: 140px;background-color: transparent;border-radius: 20px;">
+            <button
+                style="color:#fff;background-color:transparent;font-size:40px;position:absolute;left:59.5%;top:19%;border: none;outline:none;"
+                type="button" onclick='document.getElementById("contact").style.transform="scale(0,0)"'><i
+                    class="fa-solid fa-close"></i></button>
+            <p class="h4 mb-4 text-light">Contact us</p>
+
+            <!-- Name -->
+            <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+
+            <!-- Email -->
+            <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+            <!-- Subject -->
+            <label class="text-light">Subject</label>
+            <select class="browser-default custom-select mb-4">
+                <option value="" disabled>Choose option</option>
+                <option value="1" selected>Feedback</option>
+                <option value="2">Report a bug</option>
+                <option value="3">Feature request</option>
+                <option value="4">Feature request</option>
+            </select>
+
+            <!-- Message -->
+            <div class="form-group">
+                <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"
+                    placeholder="Message"></textarea>
+            </div>
+
+            <!-- Copy -->
+            <div class="custom-control custom-checkbox mb-4">
+                <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+                <label class="custom-control-label text-light" for="defaultContactFormCopy">Send me a copy of this
+                    message</label>
+            </div>
+
+            <!-- Send button -->
+            <button class="btn btn-info btn-block" type="submit">Send</button>
+
+        </form>
+        <!-- Default form contact -->
+    </div>
+
+    <!-- ------------------------- social-icons -------------------------- -->
+    <div class="icons">
+        <div class="icon1">
+            <a href="https://www.twitter.com/vamsimanugula" target="_blank"><i class="fa-brands fa-twitter"
+                    style="font-size: 35px;color: #f8f8f8;padding: 10px 15px;"></i></a>
+        </div>
+        <div class="icon2">
+            <a href="https://www.instagram.com/ramaprakashmanugula" target="_blank"><i class="fa-brands fa-instagram"
+                    style="font-size: 35px;color: #f8f8f8;padding: 10px 15px;"></i></a>
+        </div>
+        <div class="icon3">
+            <a href="https://www.facebook.com/prakash.manugula" target="_blank"><i class="fa-brands fa-facebook"
+                    style="font-size: 35px;color: #f8f8f8;padding: 10px 15px;"></i></a>
+        </div>
+    </div>
+    <!-- ------------------------video------------------------------------- -->
+
+
+    <video src="video/Untitled video - Made with Clipchamp (2).mp4" autoplay muted playsinline loop></video>
+    <div class="banner-faded"></div>
+
+    <!-- ----------------- middle navbar ------------------------- -->
+    <ul class="nav justify-content-center" style="margin-top: 150rems; position: absolute; top: 860px; left: 45%;  ">
+        <li class="nav-item">
+            <a class="nav-link  bg-dark" style="color: #999;" href="earth.html">Overview</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active bg-dark" style="color: #fff;" href="earth1.html">In depth</a>
+        </li>
+
+    </ul>
+
+    <!-- --------------------------------- side 3d models------------------------------- -->
+    <div class="con" style="display:flex;justify-content: space-between;">
+        <div class="leftside" style="position: sticky;top:0;z-index:4;">
+            <model-viewer src="image/earth1.glb" alt="Earth" auto-rotate camera-controls arios-src="image/earth1.glb"
+                data-aos="fade-right" data-aos-duration="2000"></model-viewer>
+        </div>
+        <div class="center" style="max-width: 600px;color:rgb(188, 188, 188);margin-top: 60px;font-size: 16px;">
+            Our home planet is the third planet from the Sun, and the only place we know of so far that’s inhabited by
+            living things. While Earth is only the fifth largest planet in the solar system, it is the only world in our
+            solar system with liquid water on the surface. Just slightly larger than nearby Venus, Earth is the biggest
+            of the four planets closest to the Sun, all of which are made of rock and metal.<br><br>
+
+            <b style="color:#fff;font-size:25px;">Namesake</b><br><br>
+            The name Earth is at least 1,000 years old. All of the planets, except for Earth, were named after Greek and
+            Roman gods and goddesses. However, the name Earth is a Germanic word, which simply means “the
+            ground.”<br><br>
+
+            <b style="color:#fff;font-size:25px;">Potential for Life</b><br><br>
+            Earth has a very hospitable temperature and mix of chemicals that have made life abundant here. Most
+            notably, Earth is unique in that most of our planet is covered in liquid water, since the temperature allows
+            liquid water to exist for extended periods of time. Earth's vast oceans provided a convenient place for life
+            to begin about 3.8 billion years ago.<br><br>
+
+            Some of the features of our planet that make it great for sustaining life are changing due to the ongoing
+            effects of climate change. To find out more visit our sister website, climate.nasa.gov.<br><br>
+
+            <b style="color:#fff;font-size:25px;">Size and Distance</b><br><br>
+            With a radius of 3,959 miles (6,371 kilometers), Earth is the biggest of the terrestrial planets and the
+            fifth largest planet overall.<br>
+
+            From an average distance of 93 million miles (150 million kilometers), Earth is exactly one astronomical
+            unit away from the Sun because one astronomical unit (abbreviated as AU), is the distance from the Sun to
+            Earth. This unit provides an easy way to quickly compare planets' distances from the Sun.<br><br>
+
+            It takes about eight minutes for light from the Sun to reach our planet.<br><br>
+
+            <div class="center" style="max-width: 600px;color:rgb(188, 188, 188);margin-top: 60px;font-size: 16px;">
+                <b style="color:#fff;font-size:25px;">Orbit and Rotation</b><br><br>
+                As Earth orbits the Sun, it completes one rotation every 23.9 hours. It takes 365.25 days to complete one
+                trip around the Sun. That extra quarter of a day presents a challenge to our calendar system, which counts
+                one year as 365 days. To keep our yearly calendars consistent with our orbit around the Sun, every four
+                years we add one day. That day is called a leap day, and the year it's added to is called a leap
+                year.<br><br>
+    
+                Earth's axis of rotation is tilted 23.4 degrees with respect to the plane of Earth's orbit around the Sun.
+                This tilt causes our yearly cycle of seasons. During part of the year, the northern hemisphere is tilted
+                toward the Sun, and the southern hemisphere is tilted away. With the Sun higher in the sky, solar heating is
+                greater in the north producing summer there. Less direct solar heating produces winter in the south. Six
+                months later, the situation is reversed. When spring and fall begin, both hemispheres receive roughly equal
+                amounts of heat from the Sun.<br><br>
+    
+                <b style="color:#fff;font-size:25px;">Moons</b><br><br>
+                Earth is the only planet that has a single moon. Our Moon is the brightest and most familiar object in the
+                night sky. In many ways, the Moon is responsible for making Earth such a great home. It stabilizes our
+                planet's wobble, which has made the climate less variable over thousands of years.<br><br>
+    
+                Earth sometimes temporarily hosts orbiting asteroids or large rocks. They are typically trapped by Earth's
+                gravity for a few months or years before returning to an orbit around the Sun. Some asteroids will be in a
+                long “dance” with Earth as both orbit the Sun.<br><br>
+    
+                Some moons are bits of rock that were captured by a planet's gravity, but our Moon is likely the result of a
+                collision billions of years ago. When Earth was a young planet, a large chunk of rock smashed into it,
+                displacing a portion of Earth's interior. The resulting chunks clumped together and formed our Moon. With a
+                radius of 1,080 miles (1,738 kilometers), the Moon is the fifth largest moon in our solar system (after
+                Ganymede, Titan, Callisto, and Io).<br><br>
+    
+                The Moon is an average of 238,855 miles (384,400 kilometers) away from Earth. That means 30 Earth-sized
+                planets could fit in between Earth and its Moon.<br><br>
+    
+                <b style="color:#fff;font-size:25px;">Rings</b><br><br>
+                Earth has no rings.<br><br>
+    
+                <b style="color:#fff;font-size:25px;">Formation</b><br><br>
+                When the solar system settled into its current layout about 4.5 billion years ago, Earth formed when gravity
+                pulled swirling gas and dust in to become the third planet from the Sun. Like its fellow terrestrial
+                planets, Earth has a central core, a rocky mantle, and a solid crust.<br><br>
+    
+                <b style="color:#fff;font-size:25px;">Structure</b><br><br>
+                Earth is composed of four main layers, starting with an inner core at the planet's center, enveloped by the
+                outer core, mantle, and crust.<br><br>
+    
+                The inner core is a solid sphere made of iron and nickel metals about 759 miles (1,221 kilometers) in
+                radius. There the temperature is as high as 9,800 degrees Fahrenheit (5,400 degrees Celsius). Surrounding
+                the inner core is the outer core. This layer is about 1,400 miles (2,300 kilometers) thick, made of iron and
+                nickel fluids.<br><br>
+    
+                In between the outer core and crust is the mantle, the thickest layer. This hot, viscous mixture of molten
+                rock is about 1,800 miles (2,900 kilometers) thick and has the consistency of caramel. The outermost layer,
+                Earth's crust, goes about 19 miles (30 kilometers) deep on average on land. At the bottom of the ocean, the
+                crust is thinner and extends about 3 miles (5 kilometers) from the seafloor to the top of the
+                mantle.<br><br>
+    
+                <b style="color:#fff;font-size:25px;">Surface</b><br><br>
+                Like Mars and Venus, Earth has volcanoes, mountains, and valleys. Earth's lithosphere, which includes the
+                crust (both continental and oceanic) and the upper mantle, is divided into huge plates that are constantly
+                moving. For example, the North American plate moves west over the Pacific Ocean basin, roughly at a rate
+                equal to the growth of our fingernails. Earthquakes result when plates grind past one another, ride up over
+                one another, collide to make mountains, or split and separate.<br><br>
+    
+                Earth's global ocean, which covers nearly 70% of the planet's surface, has an average depth of about 2.5
+                miles (4 kilometers) and contains 97% of Earth's water. Almost all of Earth's volcanoes are hidden under
+                these oceans. Hawaii's Mauna Kea volcano is taller from base to summit than Mount Everest, but most of it is
+                underwater. Earth's longest mountain range is also underwater, at the bottom of the Arctic and Atlantic
+                oceans. It is four times longer than the Andes, Rockies and Himalayas combined.<br><br>
+    
+                <b style="color:#fff;font-size:25px;">Atmosphere</b><br><br>
+                Near the surface, Earth has an atmosphere that consists of 78% nitrogen, 21% oxygen, and 1% other gases such
+                as argon, carbon dioxide, and neon. The atmosphere affects Earth's long-term climate and short-term local
+                weather and shields us from much of the harmful radiation coming from the Sun. It also protects us from
+                meteoroids, most of which burn up in the atmosphere, seen as meteors in the night sky, before they can
+                strike the surface as meteorites.
+    
+                <b style="color:#fff;font-size:25px;">Magnetosphere</b><br><br>
+                Our planet's rapid rotation and molten nickel-iron core give rise to a magnetic field, which the solar wind
+                distorts into a teardrop shape in space. (The solar wind is a stream of charged particles continuously
+                ejected from the Sun.) When charged particles from the solar wind become trapped in Earth's magnetic field,
+                they collide with air molecules above our planet's magnetic poles. These air molecules then begin to glow
+                and cause aurorae, or the northern and southern lights.<br><br>
+    
+                The magnetic field is what causes compass needles to point to the North Pole regardless of which way you
+                turn. But the magnetic polarity of Earth can change, flipping the direction of the magnetic field. The
+                geologic record tells scientists that a magnetic reversal takes place about every 400,000 years on average,
+                but the timing is very irregular. As far as we know, such a magnetic reversal doesn't cause any harm to life
+                on Earth, and a reversal is very unlikely to happen for at least another thousand years. But when it does
+                happen, compass needles are likely to point in many different directions for a few centuries while the
+                switch is being made. And after the switch is completed, they will all point south instead of north.​
+                <br><br><br><br>
+            </div>
+        </div>
+        <div class="rightside" style="position: sticky;top:0;z-index: 4;">
+            <model-viewer src="image/earth1.glb" alt="Earth" auto-rotate camera-controls arios-src="image/earth1.glb"
+                data-aos="fade-right" data-aos-duration="2000"></model-viewer>
+        </div>
+    </div>
+
+    <!-- ------------------------------- carousel -------------------------------------- -->
+    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="margin-top: 100px;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/mercury-5556108_1920.jpg" class="d-block w-100" alt="" height="700">
+            </div>
+            <div class="carousel-item">
+                <img src="image/mercury-1226433_1280.jpg" class="d-block w-100" alt="..." height="700">
+            </div>
+            <div class="carousel-item">
+                <img src="image/mercury-7292788_1280.jpg" class="d-block w-100" alt="..." height="700">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div> -->
+
+    <!-- ---------------------------------------------Footer------------------------------------------------- -->
+
+    <div class="footer">
+        <h1 class="footer-h1">Questions? call 000-000-000-000</h1>
+        <div class="row">
+            <div class="col">
+                <a href="solarsystem.html">Solar System</a>
+                <a href="sun.html">Sun</a>
+                <a href="milkyway.html">Milky Way</a>
+                <a href="blackhole.html">Black Hole</a>
+            </div>
+            <div class="col">
+                <a href="mercury.html">Mercury</a>
+                <a href="venus.html">Venus</a>
+                <a href="earth.html">Earth</a>
+                <a href="mars.html">Mars</a>
+            </div>
+            <div class="col">
+                <a href="jupiter.html">Jupiter</a>
+                <a href="saturn.html">Saturn</a>
+                <a href="uranus.html">Uranus</a>
+                <a href="neptune.html">Neptune</a>
+            </div>
+            <div class="col">
+                <a href="about.html">About Us</a>
+                <button type="button"
+                    style="padding: 5px;margin-top: -5px;outline:none;border:none;border-radius: 5px;transition: .7s;"
+                    onclick='document.getElementById("contact").style.transform="scale(1,1)"'>Contact Us</button>
+            </div>
+        </div>
+    </div>
+
+    <!------------------- Chat bot -------------------->
+    <!--Start of Conferbot Script-->
+    <script type="text/javascript">
+        (function (d, s, id) {
+            var js,
+                el = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.async = true;
+            js.src = 'https://s3.ap-south-1.amazonaws.com/conferbot.defaults/dist/v1/widget.min.js';
+            js.id = id;
+            js.charset = 'UTF-8';
+            el.parentNode.insertBefore(js, el);
+            // Initializes the widget when the script is ready
+            js.onload = function () {
+                var w = window.ConferbotWidget("64719fa23b98f3224becc5ff", "live_chat");
+            };
+        })(document, 'script', 'conferbot-js');
+    </script>
+    <!--End of Conferbot Script-->
+    <!-- -------------- mouse event ---------- -->
+    <div class="cursor1"></div>
+    <div class="cursor2"></div>
+
+    <script>
+        var cursor1 = document.querySelector(".cursor1");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove", function (e) {
+            cursor1.style.cssText = cursor2.style.cssText = "left: " + e.clientX
+                + "px; top:" + e.clientY + "px;";
+        })
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

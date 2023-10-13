@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercury - Solar System</title>
+    <!-- ------------------------css -------------------------- -->
+    <link rel="stylesheet" href="css/mercury.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- ------------------------------------cdn css------------------------------------------- -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- -------------------------------------------cdn-------------------------------------------- -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- -------------- 3d script ------------- -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+<body style="background-color: #222;">
+    <!-- -------------------------------Navbar--------------------------------------- -->
+
+
+
+    <div class="contain">
+        <div class="header">
+            <div class="nav" id="nav">
+                <div class="logo" style="padding:20px 30px;">
+                    <img src="image/space111.png" alt="Logo" height="310" width="320"
+                        style="margin-top: -130px;margin-left: 20px;">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li class="show"><a href="#timeline">Planets &nbsp;&nbsp;<i
+                                    class="fa-solid fa-angle-down"></i></a>
+                            <div class="hidden">
+                                <a href="mercury.html">Mercury</a>
+                                <a href="venus.html">Venus</a>
+                                <a href="earth.html">Earth</a>
+                                <a href="mars.html">Mars</a>
+                                <a href="jupiter.html">Jupiter</a>
+                                <a href="saturn.html">Saturn</a>
+                                <a href="uranus.html">Uranus</a>
+                                <a href="neptune.html">Neptune</a>
+                            </div>
+                        </li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><button type="button"
+                                style="padding: 5px 10px;margin-top: -5px;outline:none;border: 2px solid #fff;border-radius: 5px;transition: .7s;"
+                                onclick='document.getElementById("contact").style.transform="scale(1,1)"'>Contact
+                                Us</button>
+                        </li>
+                        <li class="show"><a href="#hide1" style="margin-right: 40px;"><img
+                                    style="background-color:white;border-radius: 30px;margin-top:-5px;"
+                                    src="image/profile2.png" alt="" width="40px" height="40px"></a>
+                            <div class="hide" id="hide1"><a href="index.html">Logout</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------- contactus form ------------------------->
+    <div class="contact" id="contact">
+        <!-- Default form contact -->
+        <form class="text-center border border-light p-5" action="#!"
+            style="width:25%;margin-left: auto;margin-right: auto;border:2px solid #000;margin-top: 140px;background-color: transparent;border-radius: 20px;">
+            <button
+                style="color:#fff;background-color:transparent;font-size:40px;position:absolute;left:59.5%;top:19%;border: none;outline:none;"
+                type="button" onclick='document.getElementById("contact").style.transform="scale(0,0)"'><i
+                    class="fa-solid fa-close"></i></button>
+            <p class="h4 mb-4 text-light">Contact us</p>
+
+            <!-- Name -->
+            <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+
+            <!-- Email -->
+            <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+            <!-- Subject -->
+            <label class="text-light">Subject</label>
+            <select class="browser-default custom-select mb-4">
+                <option value="" disabled>Choose option</option>
+                <option value="1" selected>Feedback</option>
+                <option value="2">Report a bug</option>
+                <option value="3">Feature request</option>
+                <option value="4">Feature request</option>
+            </select>
+
+            <!-- Message -->
+            <div class="form-group">
+                <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"
+                    placeholder="Message"></textarea>
+            </div>
+
+            <!-- Copy -->
+            <div class="custom-control custom-checkbox mb-4">
+                <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+                <label class="custom-control-label text-light" for="defaultContactFormCopy">Send me a copy of this
+                    message</label>
+            </div>
+
+            <!-- Send button -->
+            <button class="btn btn-info btn-block" type="submit">Send</button>
+
+        </form>
+        <!-- Default form contact -->
+    </div>
+
+    <!-- ------------------------- social-icons -------------------------- -->
+    <div class="icons">
+        <div class="icon1">
+            <a href="https://www.twitter.com/vamsimanugula" target="_blank"><i class="fa-brands fa-twitter"
+                    style="font-size: 35px;color: #f8f8f8;padding: 10px 15px;"></i></a>
+        </div>
+        <div class="icon2">
+            <a href="https://www.instagram.com/ramaprakashmanugula" target="_blank"><i class="fa-brands fa-instagram"
+                    style="font-size: 35px;color: #f8f8f8;padding: 10px 15px;"></i></a>
+        </div>
+        <div class="icon3">
+            <a href="https://www.facebook.com/prakash.manugula" target="_blank"><i class="fa-brands fa-facebook"
+                    style="font-size: 35px;color: #f8f8f8;padding: 10px 15px;"></i></a>
+        </div>
+    </div>
+    <!-- ------------------------video------------------------------------- -->
+
+
+    <video src="video/mercury.mp4" autoplay muted playsinline loop></video>
+    <div class="banner-faded"></div>
+
+    <!-- ----------------- middle navbar ------------------------- -->
+    <ul class="nav mid-nav justify-content-center" style="margin-top: 150rems; position: absolute; top: 860px; left: 45%;  ">
+        <li class="nav-item">
+            <a class="nav-link  bg-dark" style=" color: #fff;" href="mercury.html">Overview</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active bg-dark" style="color: #999;" href="mercury1.html">In depth</a>
+        </li>
+
+    </ul>
+
+
+    <!-- --------------------------- about ---------------------------------------- -->
+    <div class="about">
+        <h1 style="padding-top: 100px;">Mercury</h1>
+        <div class="about-mercury" style="padding-top: -60px;">
+            <div id="aSide">
+                <model-viewer src="image/mercury_planet.glb" alt="Mercury" auto-rotate camera-controls
+                    arios-src="image/scene.gtlg"></model-viewer>
+            </div>
+            <div class="desc" data-aos="fade-left" data-aos-duration="2000">
+                The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than
+                Earth's Moon.<br>
+
+                The Latest<br>
+                January 2022: The Next Full Moon is the Wolf Moon, or Ice Moon<br>
+                From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed
+                from Earth, and the sunlight would be as much as seven times brighter. Despite its proximity to the Sun,
+                Mercury is not the hottest planet in our solar system - that title belongs to nearby Venus, thanks to
+                its dense atmosphere.<br>
+
+                Because of Mercury's elliptical - egg-shaped - orbit, and sluggish rotation, the Sun appears to rise
+                briefly, set, and rise again from some parts of the planet's surface. The same thing happens in reverse
+                at sunset.
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------- carousel -------------------------------------- -->
+    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/mercury-1226433_1280.jpg" class="d-block w-100" alt="..." height="700">
+            </div>
+            <div class="carousel-item">
+                <img src="image/m1.jpg" class="d-block w-100" alt="..." height="700">
+            </div>
+            <div class="carousel-item">
+                <img src="image/mercury-7292788_1280.jpg" class="d-block w-100" alt="..." height="700">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div> -->
+
+    <!-- ------------------------------ cards ------------------------------------------ -->
+    <div class="cont">
+        <h1>Nine things about Mercury</h1>
+        <div class="cards1">
+            <div class="card1">
+                <div class="circle">1</div>
+                <h2>SMALL WORLD</h2>
+                <p data-aos="fade-right" data-aos-duration="2000">Mercury is the smallest planet in our solar system -
+                    only slightly larger than Earth's Moon. </p>
+            </div>
+            <div class="card2">
+                <div class="circle circle2" style="margin-left:80px;">2</div>
+                <h2>INSIDE TRACK</h2>
+                <p data-aos="zoom-in" data-aos-duration="2000">Mercury is the planet that orbits the closest to the Sun.
+                </p>
+            </div>
+            <div class="card3">
+                <div class="circle">3</div>
+                <h2>FASTEST PLANET</h2>
+                <p data-aos="fade-left" data-aos-duration="2000">Mercury is the fastest planet in our solar system -
+                    traveling through space at nearly 29 miles per
+                    second. Since Mercury is
+                    the fastest planet and has the shortest distance to travel around the Sun, it has the shortest year
+                    of all the planets in our solar system - 88 days.</p>
+            </div>
+        </div>
+        <div class="cards2">
+            <div class="card4">
+                <div class="circle">4</div>
+                <h2>ROUGH SURFACET</h2>
+                <p data-aos="fade-right" data-aos-duration="2000">Mercury is a rocky planet, also known as a terrestrial
+                    planet. Mercury has a solid, cratered surface,
+                    much like the Earth's moon.</p>
+            </div>
+            <div class="card5">
+                <div class="circle circle2" style="margin-left:85px;">5</div>
+                <h2>CAN'T BREATHE</h2>
+                <p data-aos="zoom-in" data-aos-duration="2000">Mercury's thin atmosphere, is composed mostly of oxygen,
+                    sodium (Na), hydrogen, helium, and
+                    potassium. </p>
+            </div>
+            <div class="card6">
+                <div class="circle">6</div>
+                <h2>ROBOTIC VISITORS</h2>
+                <p data-aos="fade-left" data-aos-duration="2000">Two NASA missions have explored Mercury: Mariner 10 was
+                    the first to fly by Mercury, and MESSENGER
+                    was the first to orbit. ESA's BepiColombo is on its way to Mercury.</p>
+            </div>
+        </div>
+        <div class="cards3">
+            <div class="card7">
+                <div class="circle">7</div>
+                <h2>MOONLESS</h2>
+                <p data-aos="fade-right" data-aos-duration="2000">Mercury has no moons.</p>
+                <h2>RINGLESS</h2>
+                <p data-aos="fade-right" data-aos-duration="2000">There are no rings around Mercury.</p>
+            </div>
+            <div class="card8">
+                <div class="circle circle2" style="margin-left:85px;">8</div>
+                <h2>TOUGH PLACE FOR LIFE</h2>
+                <p data-aos="zoom-in" data-aos-duration="2000">It is unlikely that life as we know it could survive on
+                    Mercury due to solar radiation, and extreme
+                    temperatures.</p>
+            </div>
+            <div class="card9">
+                <div class="circle">9</div>
+                <h2>BIG SUN</h2>
+                <p data-aos="fade-left" data-aos-duration="2000">Standing on Mercury's surface at its closest approach
+                    to the Sun, our star would appear more than
+                    three times larger than it does on Earth..</p>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------------------------Footer------------------------------------------------- -->
+
+    <div class="footer">
+        <h1 class="footer-h1">Questions? call 000-000-000-000</h1>
+        <div class="row">
+            <div class="col">
+                <a href="solarsystem.html">Solar System</a>
+                <a href="sun.html">Sun</a>
+                <a href="milkyway.html">Milky Way</a>
+                <a href="blackhole.html">Black Hole</a>
+            </div>
+            <div class="col">
+                <a href="mercury.html">Mercury</a>
+                <a href="venus.html">Venus</a>
+                <a href="earth.html">Earth</a>
+                <a href="mars.html">Mars</a>
+            </div>
+            <div class="col">
+                <a href="jupiter.html">Jupiter</a>
+                <a href="saturn.html">Saturn</a>
+                <a href="uranus.html">Uranus</a>
+                <a href="neptune.html">Neptune</a>
+            </div>
+            <div class="col">
+                <a href="about.html">About Us</a>
+                <button type="button"
+                    style="padding: 5px;margin-top: -5px;outline:none;border:none;border-radius: 5px;transition: .7s;"
+                    onclick='document.getElementById("contact").style.transform="scale(1,1)"'>Contact Us</button>
+            </div>
+        </div>
+    </div>
+
+    <!------------------- Chat bot -------------------->
+    <!--Start of Conferbot Script-->
+    <script type="text/javascript">
+        (function (d, s, id) {
+            var js,
+                el = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.async = true;
+            js.src = 'https://s3.ap-south-1.amazonaws.com/conferbot.defaults/dist/v1/widget.min.js';
+            js.id = id;
+            js.charset = 'UTF-8';
+            el.parentNode.insertBefore(js, el);
+            // Initializes the widget when the script is ready
+            js.onload = function () {
+                var w = window.ConferbotWidget("64719fa23b98f3224becc5ff", "live_chat");
+            };
+        })(document, 'script', 'conferbot-js');
+    </script>
+    <!--End of Conferbot Script-->
+    <!-- -------------- mouse event ---------- -->
+    <div class="cursor1"></div>
+    <div class="cursor2"></div>
+
+    <script>
+        var cursor1 = document.querySelector(".cursor1");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove", function (e) {
+            cursor1.style.cssText = cursor2.style.cssText = "left: " + e.clientX
+                + "px; top:" + e.clientY + "px;";
+        })
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
